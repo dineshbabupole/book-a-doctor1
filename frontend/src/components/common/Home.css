@@ -1,0 +1,61 @@
+/* Gradient navbar */
+.nav-gradient {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+/* Hero Section background */
+.hero-section {
+  background: linear-gradient(to bottom right, #f8f9fa, #e6f0ff);
+  min-height: 90vh;
+}
+
+/* Animation: left to right */
+.animate-left {
+  animation: slideLeft 1s ease-out;
+}
+
+.animate-right {
+  animation: slideRight 1s ease-out;
+}
+
+.animate-fade {
+  animation: fadeIn 1.5s ease-in;
+}
+
+/* Hero image effect */
+.hero-image {
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.03);
+}
+
+/* Animations */
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

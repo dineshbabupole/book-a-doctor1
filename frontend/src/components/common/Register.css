@@ -1,0 +1,28 @@
+.nav-gradient {
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+}
+
+.register-animation {
+  animation: slideIn 0.8s ease;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mdb-input input:focus {
+  border-color: #00f2fe !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 242, 254, 0.25);
+}
+
+.mdb-radio input:checked + label {
+  color: #007bff;
+  font-weight: 500;
+}

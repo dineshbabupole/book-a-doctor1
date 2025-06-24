@@ -1,0 +1,26 @@
+/* Gradient Navbar */
+.nav-gradient {
+  background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+}
+
+/* Entrance animation */
+.login-animation {
+  animation: fadeSlide 1.2s ease-out;
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhance text selection */
+::selection {
+  background: #00f2fe;
+  color: #fff;
+}
