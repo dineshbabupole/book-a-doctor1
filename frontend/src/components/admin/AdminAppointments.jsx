@@ -25,7 +25,7 @@ const AdminAppointments = () => {
   const getAppointments = async () => {
     setLoading(true);
     try {
-      const res = await axios.get('http://localhost:8001/api/admin/getallAppointmentsAdmin', {
+      const res = await axios.get('https://book-a-doctor1.onrender.com/api/admin/getallAppointmentsAdmin', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },

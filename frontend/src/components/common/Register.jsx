@@ -40,7 +40,7 @@ const Register = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:8001/api/user/register', user);
+      const res = await axios.post('https://book-a-doctor1.onrender.com/api/user/register', user);
       if (res.data.success) {
         message.success('Registered successfully!');
         navigate('/login');

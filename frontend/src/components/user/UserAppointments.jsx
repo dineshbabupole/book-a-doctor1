@@ -27,7 +27,7 @@ const UserAppointments = () => {
 
   const getUserAppointment = async () => {
     try {
-      const res = await axios.get('http://localhost:8001/api/user/getuserappointments', {
+      const res = await axios.get('https://book-a-doctor1.onrender.com/api/user/getuserappointments', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -44,7 +44,7 @@ const UserAppointments = () => {
 
   const getDoctorAppointment = async () => {
     try {
-      const res = await axios.get('http://localhost:8001/api/doctor/getdoctorappointments', {
+      const res = await axios.get('https://book-a-doctor1.onrender.com/api/doctor/getdoctorappointments', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -61,7 +61,7 @@ const UserAppointments = () => {
 
   const handleStatus = async (userid, appointmentId, status) => {
     try {
-      const res = await axios.post('http://localhost:8001/api/doctor/handlestatus', {
+      const res = await axios.post('https://book-a-doctor1.onrender.com/api/doctor/handlestatus', {
         userid, appointmentId, status,
       }, {
         headers: {
@@ -80,7 +80,7 @@ const UserAppointments = () => {
 
   const handleDownload = async (url, appointId) => {
     try {
-      const res = await axios.get('http://localhost:8001/api/doctor/getdocumentdownload', {
+      const res = await axios.get('https://book-a-doctor1.onrender.com/api/doctor/getdocumentdownload', {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         params: { appointId },
         responseType: 'blob',

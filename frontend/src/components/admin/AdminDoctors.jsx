@@ -25,7 +25,7 @@ const AdminDoctors = () => {
   const getDoctors = async () => {
     setLoading(true);
     try {
-      const res = await axios.get('http://localhost:8001/api/admin/getalldoctors', {
+      const res = await axios.get('https://book-a-doctor1.onrender.com/api/admin/getalldoctors', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -45,7 +45,7 @@ const AdminDoctors = () => {
   const handleApprove = async (doctorId, status, userId) => {
    console.log(userId);
     try {
-      const res = await axios.post('http://localhost:8001/api/admin/getapprove', { doctorId, status, userId }, {
+      const res = await axios.post('https://book-a-doctor1.onrender.com/api/admin/getapprove', { doctorId, status, userId }, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -62,7 +62,7 @@ const AdminDoctors = () => {
 
   const handleReject = async (doctorId, status, userid) => {
     try {
-      const res = await axios.post('http://localhost:8001/api/admin/getreject', { doctorId, status, userid }, {
+      const res = await axios.post('https://book-a-doctor1.onrender.com/api/admin/getreject', { doctorId, status, userid }, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

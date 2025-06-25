@@ -23,8 +23,6 @@ const ApplyDoctor = () => {
   const handleSubmit = async (values) => {
     setLoading(true);
     try {
-     
-
       const formattedTimings = values.timings.map(time =>
         moment(time).format("HH:mm")
       );
@@ -42,7 +40,7 @@ const ApplyDoctor = () => {
         type: 'user'
       };
 
-      const res1 = await axios.post('http://localhost:8001/api/user/register', userPayload);
+      const res1 = await axios.post('https://book-a-doctor1.onrender.com/api/user/register', userPayload);
       const userId = res1.data?.user?._id;
 
       if (!userId) {
@@ -56,7 +54,7 @@ const ApplyDoctor = () => {
       formData.append("userId", userId);
       formData.append("doctor", JSON.stringify(doctorData));
 
-      const res2 = await axios.post('http://localhost:8001/api/user/registerdoc', formData, {
+      const res2 = await axios.post('https://book-a-doctor1.onrender.com/api/user/registerdoc', formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
           'Content-Type': 'multipart/form-data',
