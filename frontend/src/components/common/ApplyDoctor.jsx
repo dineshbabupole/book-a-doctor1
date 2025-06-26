@@ -60,7 +60,7 @@ const ApplyDoctor = () => {
         doctor: doctorData,
       };
 
-      const res2 = await axios.post('https://localhost:8001/api/user/registerdoc', finalDoctorPayload, {
+      const res2 = await axios.post('https://book-a-doctor1.onrender.com/api/user/registerdoc', finalDoctorPayload, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         }
