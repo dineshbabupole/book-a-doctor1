@@ -46,7 +46,7 @@ const ApplyDoctor = () => {
         type: 'user',
       };
 
-      const res1 = await axios.post('https://localhost:8001/api/user/register', userPayload);
+      const res1 = await axios.post('https://book-a-doctor1.onrender.com/api/user/register', userPayload);
       const userId = res1.data?.user?._id;
 
       if (!userId) {
