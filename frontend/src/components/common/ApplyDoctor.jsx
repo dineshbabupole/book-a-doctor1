@@ -6,41 +6,47 @@ import {
   Row,
   TimePicker,
   message,
-  Upload,
-  Button as AntButton
 } from 'antd';
 import { Container } from 'react-bootstrap';
 import axios from 'axios';
 import moment from 'moment';
-import { UploadOutlined } from '@ant-design/icons';
 
 const ApplyDoctor = () => {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
-  const [file, setFile] = useState(null);
 
-  
   const handleSubmit = async (values) => {
     setLoading(true);
     try {
-      const formattedTimings = values.timings.map(time =>
-        moment(time).format("HH:mm")
-      );
+      const { timings } = values;
+
+     
+      if (!timings || timings.length !== 2 || !timings[0] || !timings[1]) {
+        message.error("Please select valid available timings");
+        setLoading(false);
+        return;
+      }
+
+      // Format timings as HH:mm
+      const formattedTimings = [
+        timings[0].format("HH:mm"),
+        timings[1].format("HH:mm"),
+      ];
 
       const doctorData = {
         ...values,
-        timings: formattedTimings
+        timings: formattedTimings,
       };
-
+       console.log(doctorData.timings);
       const userPayload = {
         fullName: values.fullName,
         email: values.email,
         password: values.password,
         phone: values.phone,
-        type: 'user'
+        type: 'user',
       };
 
-      const res1 = await axios.post('https://book-a-doctor1.onrender.com/api/user/register', userPayload);
+      const res1 = await axios.post('https://localhost:8001/api/user/register', userPayload);
       const userId = res1.data?.user?._id;
 
       if (!userId) {
@@ -49,22 +55,20 @@ const ApplyDoctor = () => {
         return;
       }
 
-      const formData = new FormData();
-      formData.append("document", file);
-      formData.append("userId", userId);
-      formData.append("doctor", JSON.stringify(doctorData));
+      const finalDoctorPayload = {
+        userId,
+        doctor: doctorData,
+      };
 
-      const res2 = await axios.post('https://book-a-doctor1.onrender.com/api/user/registerdoc', formData, {
+      const res2 = await axios.post('https://localhost:8001/api/user/registerdoc', finalDoctorPayload, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
-          'Content-Type': 'multipart/form-data',
         }
       });
 
       if (res2.data.success) {
         message.success(res2.data.message);
         form.resetFields();
-        setFile(null);
       } else {
         message.error(res2.data.message || 'Doctor registration failed');
       }
