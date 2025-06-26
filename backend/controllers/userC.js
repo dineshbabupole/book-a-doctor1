@@ -94,7 +94,7 @@ export const docController = async (req, res) => {
 
     const newDoctor = new docSchema({
       userId:userId,
-      doctor, 
+      ...doctor, 
       status: "pending",
       document: documentInfo, 
     });
