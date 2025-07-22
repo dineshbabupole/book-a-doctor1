@@ -1,83 +1,111 @@
-📌 Project Title:
-DocSpot: Seamless Appointment Booking for Health
+# 🩺 DocSpot – Doctor Appointment Booking Platform
 
-👥 Team Members:
-Team Leader : Hari J
+DocSpot is a full-stack web application that allows patients to book appointments with doctors, while providing doctors and admins with dedicated dashboards to manage schedules and requests.
 
-Team member : P Dinesh Babu
 
-Team member : P Hemanth Kumar Reddy
 
-Team member : H Bhaskar Teja Datta
+## 📁 Project Structure
 
-Team member : Hemanth Kumar Reddy R
+project-root/
+├── backend/           # Node.js + Express backend (API, routes, DB models)
+├── frontend/          # ReactJS frontend
+├── screenshots/       # Screenshots of the application UI
+├── uploads/           # Uploaded files (e.g., reports)
+├── .gitignore         # Git ignored files
+├── README.md          # Project overview and documentation
+├── package-lock.json  # Backend dependency lock file
+├── package.json       # Backend project dependencies
 
-🔗 GitHub Repository:
-https://github.com/dineshbabupole/book-a-doctor1/
 
-📝 Project Description:
-Book a doctor is a web-based appointment booking platform designed to simplify the process of connecting patients with healthcare providers. It offers a secure and seamless experience for patients, doctors, and administrators to manage appointments, consultations, and platform operations.
 
-This system is inspired by real-world healthcare needs and is modeled as a scenario-based case study, ensuring practical utility and end-to-end functionality.
+ 🌐 Tech Stack
 
-🌟 Key Features (Scenario-Based Case Study):
-👤 1. User Registration
-John, a user, visits DocSpot for a routine check-up. He signs up as a Customer using his email and sets a password.
+ Frontend:
+- ReactJS
+- Ant Design + Bootstrap
+- Axios (for API requests)
+- React Router
 
-🔍 2. Browsing and Filtering Doctors
-After logging in, John is shown a dashboard of available doctors. He filters by specialization, location, or availability.
+### Backend:
+- Node.js
+- Express.js
+- MongoDB (with Mongoose)
+- JWT (Authentication)
+- Multer (for file uploads)
 
-📅 3. Booking an Appointment
-John clicks "Book Now" on a preferred doctor, selects a date, and uploads medical records or insurance documents.
-He then receives a confirmation message indicating that the appointment request has been submitted.
+---
 
-✅ 4. Appointment Confirmation
-The selected doctor reviews the request and confirms it.
-John receives a notification with the appointment date, time, and location. The appointment status changes to “Scheduled.”
+## 📽️ Video Demo
 
-🧾 5. Appointment Management
-John can view all upcoming appointments in his dashboard.
-He can cancel, reschedule, or update appointments as needed.
+The video demo showcases a full walkthrough of the DocSpot platform, including:
 
-🛡 6. Admin Approval & Governance
-Admins:
+- Homepage layout and role-based login  
+- Doctor search and filtering  
+- Appointment booking with file upload  
+- Doctor dashboard and consultation handling  
+- Admin dashboard with approval management  
+- Seamless user and admin experiences
 
-Approve doctor registrations
+🔗 [Watch Demo Video](https://drive.google.com/file/d/169aHVERtfYa3h927EadTGzzjAXtBa1qI/view?usp=drive_link)
 
-Monitor all platform activities
+---
 
-Enforce privacy policies and resolve disputes
+## 🖼️ Screenshots
 
-🩺 7. Doctor Dashboard & Management
-Doctors like Dr. Smith:
+Find visuals of the working UI in the `/screenshots` folder to get a quick overview of:
 
-Log in and manage appointments
+- User interface
+- Doctor listings
+- Booking page
+- Dashboards for each role
 
-Confirm/reschedule/cancel as required
+---
 
-Mark appointment status (e.g., Completed, Cancelled)
+## 🚀 Getting Started
 
-👨‍⚕️ 8. Consultation Day
-John visits Dr. Smith for his consultation.
-The doctor provides medical care and may update John’s medical record.
+### 1. Clone the repository
 
-🛠️ Tech Stack:
-Frontend: ReactJS, Ant Design, Bootstrap
+```bash
+git clone https://github.com/dineshbabupole/book-a-doctor1.git
+cd book-a-doctor1
+```
 
-Backend: Node.js, Express.js
+### 2. Start Backend
 
-Database: MongoDB (MongoDB Atlas)
+```bash
+cd backend
+npm install
+npm start
+```
 
-Authentication: JWT (JSON Web Token)
+### 3. Start Frontend
 
-Tools: Git, GitHub, Postman
+```bash
+cd ../frontend
+npm install
+npm start
+```
 
-🌐 Live Application Link (Optional):
-https://book-a-doctor1.onrender.com/
 
-🎥 Demo Video (Optional):
- https://drive.google.com/file/d/169aHVERtfYa3h927EadTGzzjAXtBa1qI/view?usp=drive_link
 
-✅ Project Status:
-✔️ Completed – 90%
-🚀 Submitted for mentor review
+---
+
+## 👥 Team Members
+
+- 🧑‍💼 Hari J (Team Leader)
+- 👨‍💻 P Dinesh Babu
+- 👨‍💻 P Hemanth Kumar Reddy
+- 👨‍💻 H Bhaskar Teja Datta
+- 👨‍💻 Hemanth Kumar Reddy R
+
+---
+
+## 🔗 Live Deployment
+
+🟢 **Live URL**: [https://book-a-doctor1.onrender.com](https://book-a-doctor1.onrender.com)
+
+---
+
+## ✅ Project Status
+
+✅ **Completed (90%)** – Final version submitted for mentor review.
