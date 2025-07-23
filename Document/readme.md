@@ -1,83 +1,70 @@
-# 🩺 DocSpot – Seamless Appointment Booking for Health
+DocSpot – Document Report
 
-DocSpot is a full-stack MERN web application that streamlines medical appointment scheduling for patients, doctors, and administrators. It supports secure authentication, doctor verification, digital uploads, and real-time appointment tracking.
+Welcome to the detailed documentation of DocSpot, a MERN stack-based healthcare appointment scheduling system. This document report provides a comprehensive view of the design, development, and planning involved in the project.
 
----
+Contents of the Report
 
-## 👥 Team Members
+The document (PDF) covers the following sections:
 
-- **Team Leader**: Hari J  
-- **Team Members**:  
-  - P. Dinesh Babu  
-  - P. Hemanth Kumar Reddy  
-  - H. Bhaskar Teja Datta  
-  - R. Hemanth Kumar Reddy
+1. Abstract
+- Overview of DocSpot’s purpose and benefits.
+- Highlights of how the platform simplifies and digitizes the healthcare booking process.
 
----
+2. Problem Statement
+- Discusses the current limitations in traditional appointment booking systems.
+- Identifies the need for real-time, user-friendly healthcare appointment management.
 
-## 📁 Repository Structure
+3. Empathy Map
+- Captures insights from different users: patients, doctors, and admins.
+- Focuses on user needs, frustrations, motivations, and goals.
 
-```
-project-root/
-├── .idea/             # IDE config
-├── .vscode/           # VS Code settings
-├── backend/           # Node.js + Express backend
-├── frontend/          # React frontend
-├── screenshots/       # UI screenshots
-├── uploads/           # Uploaded documents (e.g., reports)
-├── README.md          # Project overview
-├── package.json       # Backend dependencies
-├── package-lock.json  # Dependency lock file
-```
+4. System Architecture
+- Explains the layered structure of the MERN stack.
+- Shows flow diagrams for authentication, data exchange, and user interaction.
 
----
+5. Use Case Flows
+- Detailed descriptions of how each user interacts with the system:
+  - Patient registration, login, booking appointments, uploading reports.
+  - Doctor verification, dashboard view, appointment tracking.
+  - Admin management of users and system records.
 
-## 📄 Document Report
+6. Project Planning & Sprint Structure
+- Timeline of deliverables using Agile methodology.
+- Weekly sprint goals, reviews, and task distribution.
 
-The `Document` (PDF) contains:
-- Abstract, problem statement, empathy map
-- System architecture & use case flows
-- Project planning and sprint structure
-- Functional & performance test cases
-- Future scope and appendix with GitHub & live links
+7. Test Cases
+- Functional Tests: For login, booking, filtering, and uploads.
+- Performance Tests: Response time, concurrent usage handling, and load testing.
 
-📄 **Document Preview**: See full report in `Document.pdf` or view [summary here](#result).
+8. Future Scope
+- Features under consideration for next iterations:
+  - Integration with video consultation tools.
+  - E-prescription and report generation.
+  - Mobile app compatibility.
 
----
+9. Appendix
+- GitHub repository link.
+- Live hosted link (Render or alternative).
+- Screenshots and additional diagrams.
 
-## 🎥 Video Demo
+Access the Report
 
-📹 Full demo includes:
-- Homepage & navigation
-- Doctor search & filters
-- Login/Registration
-- Appointment booking & document upload
-- Doctor/Admin dashboards
-- Appointment history
+You can access the full Document Report PDF here:
+Download Document Report (./Document.pdf)
 
-▶️ [Watch Demo Video](https://drive.google.com/file/d/169aHVERtfYa3h927EadTGzzjAXtBa1qI/view?usp=drive_link)
+Related Links
 
----
+GitHub Repo: github.com/your-username/docspot
+Live Demo: docspot.render.com
+Video Demo: YouTube Link
 
-## 💻 Tech Stack
+Team Members
 
-| Layer        | Technology Used                   |
-|--------------|-----------------------------------|
-| Frontend     | ReactJS, Bootstrap, Ant Design    |
-| Backend      | Node.js, Express.js               |
-| Database     | MongoDB (Mongoose)                |
-| Auth         | JWT, bcrypt.js                    |
-| Tools        | Postman, VS Code, GitHub, Compass |
+Role        - Name
+Team Leader - Hari J
+Member      - P. Dinesh Babu
+Member      - P. Hemanth Kumar Reddy
+Member      - H. Bhaskar Teja Datta
+Member      - R. Hemanth Kumar Reddy
 
----
-
-## 🌐 Live Application
-
-🔗 [DocSpot Live on Render](https://book-a-doctor1.onrender.com/)
-
----
-
-## ✅ Project Status
-
-- ✔️ Functional Completion: 90%
-- 🚀 Submitted for mentor review
+For more details, explore the full document or contact the contributors via GitHub.
